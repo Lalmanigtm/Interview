@@ -1,12 +1,14 @@
  
  import express from "express";
  import path from "path";
+
  import { ENV } from "./lib/env.js";
 
  const app = express();
 //  console.log(ENV.PORT)
 //  console.log(ENV.DB_URL)
 const __dirname = path.resolve();
+
 
  app.use("/health", (req, res) =>{
   res.status(200).json({msg: "Welcome to the Home Page"})
